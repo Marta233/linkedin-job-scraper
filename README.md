@@ -1,58 +1,94 @@
-LinkedIn Job Scraper
+# 💼 LinkedIn Job Scraper
 
-A Python-based web scraper that extracts job listings from LinkedIn based on user-specified keywords and locations. This project provides an easy way to collect job data for analysis or portfolio purposes. The results can be displayed as a sample table in a web interface and exported as a CSV file.
+A **Python-based web scraper** that extracts job listings from **LinkedIn** based on user-specified **keywords** and **locations**.  
+It provides an easy way to collect job data for analysis or portfolio projects — with results displayed in a **beautiful web interface** and exportable to **CSV**.
 
-🚀 Features
+---
 
-Scrape jobs from LinkedIn by keyword and location.
+## 🚀 Features
 
-Display a sample of scraped jobs in a table format.
+- 🔍 Scrape jobs from LinkedIn by **keyword** and **location**
+- 📊 Display a **sample of scraped jobs** in a clean HTML table
+- 💾 **Export** full scraped data to CSV
+- 🌐 **Flask web interface** for interactive use
+- ⚙️ Built with **Selenium** for dynamic content scraping
+- 🧹 Clean, structured output: **Title**, **Company**, **Location**, and **Link**
 
-Export full scraped data to CSV.
+---
 
-Flask web interface for interactive use.
+## 🛠️ Technologies Used
 
-Built with Selenium for dynamic page scraping.
+- 🐍 **Python 3.x**
+- 🕸️ **Selenium** – for web automation and scraping  
+- 🌐 **Flask** – to create the interactive web app  
+- 📊 **Pandas** – for data processing and export  
+- 🎨 **Bootstrap 5** – for responsive UI design  
+- 💻 **ChromeDriver** – controls Chrome browser for scraping  
 
-Clean and structured data: Title, Company, Location, and Link.
+---
 
-🛠️ Technologies Used
+## 💾 Installation
 
-Python 3.x
+### 1️⃣ Clone the repository
 
-Selenium – for web automation and scraping.
-
-Flask – for web interface.
-
-Pandas – for data storage and manipulation.
-
-Bootstrap 5 – for responsive HTML tables and buttons.
-
-ChromeDriver – to control Chrome browser.
-
-💾 Installation
-
-1. Clone the repository:
+```bash
 git clone https://github.com/MARTA233/linkedin-job-scraper.git
 cd linkedin-job-scraper
-2. Create a virtual environment (optional but recommended):
+```
+2️⃣ Create a virtual environment (optional but recommended):
+```bash
 python -m venv .venv
-source .venv/bin/activate  # Linux/Mac
+```
+Activate it:
+```bash
 .venv\Scripts\activate     # Windows
-3. Install the required packages:
+```
+3️⃣ Install the required packages:
+```bash
 pip install -r requirements.txt
-4. Download ChromeDriver and ensure it matches your Chrome version. Place the executable somewhere accessible, e.g., C:\Windows\chromedriver.exe
+```
+4️⃣ Download ChromeDriver
+
+Download ChromeDriver matching your Chrome browser version and place it in an accessible location (e.g. C:\Windows\chromedriver.exe).
+
+
 ⚙️ Usage
-1. Running the Flask Web App
+▶️ Run the Flask web app
+
+```bash
 python app.py
-Open your browser and go to: http://127.0.0.1:5000
+```
+Open your browser and go to: 
 
-Enter the keyword (e.g., Data Analyst) and location (e.g., Addis Ababa).
+👉 http://127.0.0.1:5000
 
-Click Scrape.
+Steps:
 
-After scraping:
+Enter a keyword (e.g., Data Analyst)
 
-Show Sample → displays the first 10 jobs in a table.
+Enter a location (e.g., Addis Ababa)
 
-Download CSV → downloads the full scraped data.
+Click Scrape
+
+After scraping completes:
+
+Click 📊 Show Sample → to view the first 10 jobs in a table
+
+Click ⬇️ Download CSV → to download all results
+
+🧾 Example Output
+
+| Title                 | Company  | Location    | Link                                         |
+| --------------------- | -------- | ----------- | -------------------------------------------- |
+| Data Analyst          | XYZ Ltd  | Addis Ababa | [View Job](https://linkedin.com/jobs/view/1) |
+| Junior Data Scientist | ABC Corp | Addis Ababa | [View Job](https://linkedin.com/jobs/view/2) |
+
+⚠️ Notes
+
+🔐 LinkedIn may require manual login during scraping.
+
+🧠 Use small job limits (e.g., max_jobs=50) to avoid being blocked.
+
+🧩 Ensure ChromeDriver version matches your Chrome browser version.
+
+⚖️ Please comply with LinkedIn’s Terms of Service
